@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Comidas - Septiembre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Calendario de Comidas - Septiembre</h1>
+    </header>
+    <main>
+        <div id="calendar"></div>
+        <div id="meal-form" class="hidden">
+            <h2>Registrar Comida</h2>
+            <form id="meal-input">
+                <label for="meal-type">Tipo de Comida:</label>
+                <select id="meal-type" required>
+                    <option value="almuerzo">Almuerzo</option>
+                    <option value="cena">Cena</option>
+                </select>
+                <label for="meal-description">¿Qué comiste?</label>
+                <textarea id="meal-description" required></textarea>
+                <label for="meal-quantity">Cantidad:</label>
+                <input type="text" id="meal-quantity" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Calendario de Comidas</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
